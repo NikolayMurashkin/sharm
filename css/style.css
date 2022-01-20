@@ -298,12 +298,12 @@ h6 {
 }
 @media (min-width: 20em) and (max-width: 72em) {
   .menu__list {
-    column-gap: clamp( 0rem , -1.4423076923rem  +  7.2115384615vw , 3.75rem );
+    column-gap: clamp( 1.25rem , 0.2884615385rem  +  4.8076923077vw , 3.75rem );
   }
 }
 @media (max-width: 20em) {
   .menu__list {
-    column-gap: 0rem;
+    column-gap: 1.25rem;
   }
 }
 @media (max-width: 47.99875em) {

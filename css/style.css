@@ -291,25 +291,25 @@ h6 {
   row-gap: 15px;
   margin: 0px 20px 0px 0px;
 }
-@media (min-width: 72em) {
-  .menu__list {
-    column-gap: 3.75rem;
-  }
-}
-@media (min-width: 20em) and (max-width: 72em) {
-  .menu__list {
-    column-gap: clamp( 1.25rem , 0.2884615385rem  +  4.8076923077vw , 3.75rem );
-  }
-}
-@media (max-width: 20em) {
-  .menu__list {
-    column-gap: 1.25rem;
-  }
-}
 @media (max-width: 47.99875em) {
   .menu__list {
     flex-direction: column;
     row-gap: 30px;
+  }
+}
+@media (min-width: 72em) {
+  .menu__item:not(:last-child) {
+    margin-right: 3.75rem;
+  }
+}
+@media (min-width: 20em) and (max-width: 72em) {
+  .menu__item:not(:last-child) {
+    margin-right: clamp( 0rem , -1.4423076923rem  +  7.2115384615vw , 3.75rem );
+  }
+}
+@media (max-width: 20em) {
+  .menu__item:not(:last-child) {
+    margin-right: 0rem;
   }
 }
 .menu__link {

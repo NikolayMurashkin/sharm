@@ -1,179 +1,343 @@
 <!DOCTYPE html>
-<html>
+<html lang="ru">
 
 <head>
+	<title>Главная</title>
 	<meta charset="UTF-8">
+	<meta name="format-detection" content="telephone=no">
+	<!-- <style>body{opacity: 0;}</style> -->
+	<link rel="stylesheet" href="css/style.min.css?_v=20220121224455">
+	<link rel="shortcut icon" href="favicon.ico">
+	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Верстка «sharm»</title>
 </head>
 
 <body>
-	<div class="rootpage">
-		<h1>Верстка «sharm»</h1>
-		<div class="rootpage__info">
-			Особенности проекта
-		</div>
-		<h2>Готовые страницы:</h2>
-		<ol class="rootpage__list">
-			<li><a target="_blank" href="home.html">Главная</a></li>
-		</ol>
-		<h2>Попапы:</h2>
-		<ol class="rootpage__list">
-			<li><a target="_blank" href="home.html#"></a></li>
-		</ol>
-		<div class="rootpage__tnx">
-			<h2>Спасибо за заказ!</h2>
-			<p>Буду рад (а) хорошему отзыву.</p>
-			<p>Обращайтесь еще!</p>
-		</div>
-		<div class="rootpage__contacts">
-			<h2>Мои контакты:</h2>
-			<p>Почта: <a href="mailto:email@gmail.com">email@gmail.com</a></p>
-			<p>Телефон: <a href="tel:8800800800">8 800 800 800</a></p>
-			<p>Соц. сеть: <a href="">ссылка на соц. сеть</a></p>
+	<div class="wrapper">
+		<header class="header">
+			<div class="header__container">
+				<a href="" class="header__logo"><picture><source srcset="img/logo-desctop.webp"type="image/webp"><img src="img/logo-desctop.png" alt="Sharm"></picture></a>
+				<div class="header__menu menu">
+					<button type="button" class="menu__icon icon-menu"><span></span></button>
+					<nav class="menu__body">
+						<ul class="menu__list">
+							<li class="menu__item"><a href="" class="menu__link">Главная</a></li>
+							<li class="menu__item"><a href="" class="menu__link">Услуги</a></li>
+							<li class="menu__item"><a href="" class="menu__link">Обучение</a></li>
+							<li class="menu__item"><a href="" class="menu__link">Контакты</a></li>
+						</ul>
+					</nav>
+					<a href="tel:79224052545" data-da=".menu__body, 767.98" class="header__phone">+7 922 405 25 45
+					</a>
+				</div>
+
+			</div>
+		</header>
+		<main class="main-page">
+			<section class="main-page__hero hero">
+				<div class="hero__image">
+					<picture><source srcset="img/main-page/hero/hero-bg.webp"type="image/webp"><img src="img/main-page/hero/hero-bg.jpg" alt="Big girl"></picture>
+				</div>
+				<div class="hero__container">
+					<div data-da=".hero, 768" class="hero__body">
+						<h1 class="hero__title">Салон красоты</h1>
+						<h3 class="hero__subtitle">Мы создаем настроение.</h3>
+						<button class="hero__button button">Записаться</button>
+						<div data-da=".menu__body, 767.98" class="hero__social">
+							<div class="hero__vk _icon-vk"></div>
+							<div class="hero__instagram _icon-instagram"></div>
+							<div class="hero__facebook _icon-facebook"></div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="main-page__welcome welcome">
+				<div class="welcome__container">
+					<div class="welcome__body">
+						<h2 class="welcome__title block-title">Добро пожаловать в наш салон </h2>
+						<div data-showmore class="welcome__text showmore">
+							<div data-showmore-content="166" class="showmore__content">
+								<p class="showmore__text">Салон красоты «Шарм» — это пространство красоты и стиля! Наше кредо: создавать настроение.</p>
+								<p class="showmore__text">Наш салон предоставляет весь спектр самых популярных услуг — это визаж, уход за бровями </p>
+								<p class="showmore__text">Наш салон предоставляет весь спектр самых популярных услуг — это визаж, уход за бровями </p>
+								<p class="showmore__text">Наш салон предоставляет весь спектр самых популярных услуг — это визаж, уход за бровями </p>
+							</div>
+							<button data-showmore-button type="button" class="showmore__more"><span>Читать далее</span><span>Скрыть</span></button>
+						</div>
+					</div>
+					<div class="welcome__video">
+						<iframe src="https://www.youtube.com/embed/CNiy8inJbhs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+					</div>
+				</div>
+			</section>
+			<section class="main-page__services services">
+				<div class="services__container">
+					<h2 class="services__title block-title">Услуги</h2>
+					<p class="services__subtitle">Создай свой образ и стиль вместе с нами </p>
+					<div class="services__body">
+						<div class="services__item item-services">
+							<a href="#" class="item-services__body">
+								<div class="item-services__image-ibg">
+									<picture><source srcset="img/main-page/services/1.webp"type="image/webp"><img src="img/main-page/services/1.jpg" alt="makeup"></picture>
+									<p class="item-services__label">Визаж</p>
+								</div>
+
+							</a>
+						</div>
+						<div class="services__item item-services">
+							<a href="#" class="item-services__body">
+								<div class="item-services__image-ibg">
+									<picture><source srcset="img/main-page/services/2.webp"type="image/webp"><img src="img/main-page/services/2.jpg" alt="makeup"></picture>
+									<p class="item-services__label">Ногтевой сервис</p>
+								</div>
+
+							</a>
+						</div>
+						<div class="services__item item-services">
+							<a href="#" class="item-services__body">
+								<div class="item-services__image-ibg">
+									<picture><source srcset="img/main-page/services/3.webp"type="image/webp"><img src="img/main-page/services/3.jpg" alt="makeup"></picture>
+									<p class="item-services__label">Депиляция</p>
+								</div>
+
+							</a>
+						</div>
+						<div class="services__item item-services">
+							<a href="#" class="item-services__body">
+								<div class="item-services__image-ibg">
+									<picture><source srcset="img/main-page/services/4.webp"type="image/webp"><img src="img/main-page/services/4.jpg" alt="makeup"></picture>
+									<p class="item-services__label">Солярий</p>
+								</div>
+
+							</a>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="main-page__why-us why-us">
+				<div class="why-us__container">
+					<h2 class="why-us__title block-title">Почему мы лучший салон</h2>
+					<ol class="why-us__list">
+						<li class="why-us__item">косметика лучших мировых брендов - Gehwol, OPI, Luxio, Reforma</li>
+						<li class="why-us__item">дезинфекция на уровне стоматологической клиники</li>
+						<li class="why-us__item">профессиональная команда сертифицированных мастеров</li>
+						<li class="why-us__item">индивидуальный подход к каждому клиенту</li>
+					</ol>
+				</div>
+			</section>
+			<section class="main-page__masters masters">
+				<div class="masters__container">
+					<h2 class="masters__title block-title">Мастера</h2>
+					<div class="masters__pagination">
+						<p class="masters__subtitle">Все наши специалисты имеют сертификаты и дипломы</p>
+						<div data-da=".masters__container, 768, 3" class="master__buttons">
+							<div class="swiper-button-prev _icon-arrow-left"></div>
+							<div class="swiper-button-next _icon-arrow-right"></div>
+							<div class="slider-quality-pagging"></div>
+						</div>
+					</div>
+					<div class="masters__slider">
+						<div class="masters__swiper">
+							<div class="masters__slide">
+								<div class="masters__image-ibg">
+									<picture><source srcset="img/main-page/masters/1.webp"type="image/webp"><img src="img/main-page/masters/1.jpg" alt=""></picture>
+									<div class="masters__hover-card">
+										<p class="masters__hover-title">Образование</p>
+										<p class="masters__hover-text">Школа красоты «Шарм», Ржевская академия искусства и культуры</p>
+										<p class="masters__hover-title">Опыт работы</p>
+										<p class="masters__hover-text">5 лет</p>
+									</div>
+								</div>
+								<h3 class="masters__name">Светлана Параманова</h3>
+								<p class="masters__profession">мастер ногтевого сервиса</p>
+							</div>
+							<div class="masters__slide">
+								<div class="masters__image-ibg">
+									<picture><source srcset="img/main-page/masters/2.webp"type="image/webp"><img src="img/main-page/masters/2.jpg" alt=""></picture>
+									<div class="masters__hover-card">
+										<p class="masters__hover-title">Образование</p>
+										<p class="masters__hover-text">Школа красоты «Шарм», Ржевская академия искусства и культуры</p>
+										<p class="masters__hover-title">Опыт работы</p>
+										<p class="masters__hover-text">5 лет</p>
+									</div>
+								</div>
+								<h3 class="masters__name">Ирина Савельева</h3>
+								<p class="masters__profession">мастер-бровист</p>
+							</div>
+							<div class="masters__slide">
+								<div class="masters__image-ibg">
+									<picture><source srcset="img/main-page/masters/3.webp"type="image/webp"><img src="img/main-page/masters/3.jpg" alt=""></picture>
+									<div class="masters__hover-card">
+										<p class="masters__hover-title">Образование</p>
+										<p class="masters__hover-text">Школа красоты «Шарм», Ржевская академия искусства и культуры</p>
+										<p class="masters__hover-title">Опыт работы</p>
+										<p class="masters__hover-text">5 лет</p>
+									</div>
+								</div>
+								<h3 class="masters__name">Елена Александрова</h3>
+								<p class="masters__profession">мастер-визажист</p>
+							</div>
+							<div class="masters__slide">
+								<div class="masters__image-ibg">
+									<picture><source srcset="img/main-page/masters/4.webp"type="image/webp"><img src="img/main-page/masters/4.jpg" alt=""></picture>
+									<div class="masters__hover-card">
+										<p class="masters__hover-title">Образование</p>
+										<p class="masters__hover-text">Школа красоты «Шарм», Ржевская академия искусства и культуры</p>
+										<p class="masters__hover-title">Опыт работы</p>
+										<p class="masters__hover-text">5 лет</p>
+									</div>
+								</div>
+								<h3 class="masters__name">Светлана Параманова</h3>
+								<p class="masters__profession">мастер ногтевого сервиса</p>
+							</div>
+							<div class="masters__slide">
+								<div class="masters__image-ibg">
+									<picture><source srcset="img/main-page/masters/5.webp"type="image/webp"><img src="img/main-page/masters/5.jpg" alt=""></picture>
+									<div class="masters__hover-card">
+										<p class="masters__hover-title">Образование</p>
+										<p class="masters__hover-text">Школа красоты «Шарм», Ржевская академия искусства и культуры</p>
+										<p class="masters__hover-title">Опыт работы</p>
+										<p class="masters__hover-text">5 лет</p>
+									</div>
+								</div>
+								<h3 class="masters__name">Ирина Савельева</h3>
+								<p class="masters__profession">мастер-бровист</p>
+							</div>
+							<div class="masters__slide">
+								<div class="masters__image-ibg">
+									<picture><source srcset="img/main-page/masters/6.webp"type="image/webp"><img src="img/main-page/masters/6.jpg" alt=""></picture>
+									<div class="masters__hover-card">
+										<p class="masters__hover-title">Образование</p>
+										<p class="masters__hover-text">Школа красоты «Шарм», Ржевская академия искусства и культуры</p>
+										<p class="masters__hover-title">Опыт работы</p>
+										<p class="masters__hover-text">5 лет</p>
+									</div>
+								</div>
+								<h3 class="masters__name">Елена Александрова</h3>
+								<p class="masters__profession">мастер-визажист</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="main-page__reviews reviews">
+				<div class="reviews__container">
+					<h2 class="reviews__title block-title">Отзывы </h2>
+					<div class="reviews__pagination">
+						<p class="reviews__subtitle">Мы каждый день поплняем ряды своих клиентов</p>
+						<div class="reviews__buttons">
+							<div class="swiper-button-prev-reviews _icon-arrow-left"></div>
+							<div class="swiper-button-next-reviews _icon-arrow-right"></div>
+							<div class="slider-quality-pagging-reviews"></div>
+						</div>
+					</div>
+				</div>
+				<div class="reviews__items">
+					<div class="reviews__container reviews__container_second">
+						<div class="reviews__slider">
+							<div class="reviews__swiper">
+								<div class="reviews__slide">
+									<div class="reviews__item">
+										<div class="reviews__image-ibg">
+											<picture><source srcset="img/main-page/reviews/1.webp"type="image/webp"><img src="img/main-page/reviews/1.jpg" alt=""></picture>
+										</div>
+										<div class="reviews__body">
+											<h3 class="reviews__name _icon-vk-reviews">Елена Александрова</h3>
+											<p class="reviews__text">В этом салоне была ни раз, теперь выбираю только его. Нравиться подход к клиенту, приветливый персонал, расслабляющая атмосфера. Я вибираю только “Шарм” и всем советую.</p>
+										</div>
+									</div>
+								</div>
+								<div class="reviews__slide">
+									<div class="reviews__item">
+										<div class="reviews__image-ibg">
+											<picture><source srcset="img/main-page/reviews/2.webp"type="image/webp"><img src="img/main-page/reviews/2.jpg" alt=""></picture>
+										</div>
+										<div class="reviews__body">
+											<h3 class="reviews__name _icon-vk-reviews">Ирина Савельева</h3>
+											<p class="reviews__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque, nemo aut deserunt sed labore quia. Distinctio suscipit soluta fugiat possimus quasi, aliquam eaque laboriosam inventore tempora, magni commodi perferendis deserunt!</p>
+										</div>
+									</div>
+								</div>
+								<div class="reviews__slide">
+									<div class="reviews__item">
+										<div class="reviews__image-ibg">
+											<picture><source srcset="img/main-page/reviews/3.webp"type="image/webp"><img src="img/main-page/reviews/3.jpg" alt=""></picture>
+										</div>
+										<div class="reviews__body">
+											<h3 class="reviews__name _icon-vk-reviews">Светлана Параманова</h3>
+											<p class="reviews__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa ab numquam similique sunt saepe omnis fuga ipsum id, vitae totam! Beatae placeat expedita reprehenderit repellat tenetur ipsam, voluptatum consectetur ad.</p>
+										</div>
+									</div>
+								</div>
+								<div class="reviews__slide">
+									<div class="reviews__item">
+										<div class="reviews__image-ibg">
+											<picture><source srcset="img/main-page/reviews/4.webp"type="image/webp"><img src="img/main-page/reviews/4.jpg" alt=""></picture>
+										</div>
+										<div class="reviews__body">
+											<h3 class="reviews__name _icon-vk-reviews">Елена Александрова</h3>
+											<p class="reviews__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit consequatur soluta rem modi doloribus optio praesentium cupiditate qui officia deleniti, veritatis enim porro odio dicta architecto temporibus laborum quaerat quas.</p>
+										</div>
+									</div>
+								</div>
+								<div class="reviews__slide">
+									<div class="reviews__item">
+										<div class="reviews__image-ibg">
+											<picture><source srcset="img/main-page/reviews/5.webp"type="image/webp"><img src="img/main-page/reviews/5.jpg" alt=""></picture>
+										</div>
+										<div class="reviews__body">
+											<h3 class="reviews__name _icon-vk-reviews">Ирина Савельева</h3>
+											<p class="reviews__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus officiis voluptates aut molestiae blanditiis totam ipsa recusandae dolores dolor voluptate consequatur eius nam eos esse itaque similique illum, praesentium quod!</p>
+										</div>
+									</div>
+								</div>
+								<div class="reviews__slide">
+									<div class="reviews__item">
+										<div class="reviews__image-ibg">
+											<picture><source srcset="img/main-page/reviews/6.webp"type="image/webp"><img src="img/main-page/reviews/6.jpg" alt=""></picture>
+										</div>
+										<div class="reviews__body">
+											<h3 class="reviews__name _icon-vk-reviews">Светлана Параманова</h3>
+											<p class="reviews__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur numquam dolores aperiam omnis libero excepturi alias odit voluptatibus mollitia quia aliquid veritatis, nobis necessitatibus ratione dolorum maiores eos animi architecto?</p>
+										</div>
+									</div>
+								</div>
+								<div class="reviews__slide">
+									<div class="reviews__item">
+										<div class="reviews__image-ibg">
+											<picture><source srcset="img/main-page/reviews/7.webp"type="image/webp"><img src="img/main-page/reviews/7.jpg" alt=""></picture>
+										</div>
+										<div class="reviews__body">
+											<h3 class="reviews__name _icon-vk-reviews">Елена Александрова</h3>
+											<p class="reviews__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat non odit magni odio, inventore doloremque ipsum mollitia pariatur quam eveniet deserunt aspernatur animi a quis voluptatibus quo rerum molestias dignissimos?</p>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<div>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Assumenda sed perspiciatis excepturi id consectetur itaque mollitia illum ipsum, fuga, repudiandae blanditiis quisquam voluptas facere vero fugit sint magni quam nobis.</div>
+		</main>
+		<footer class="footer">
+			<div class="footer__container">
+			</div>
+		</footer>
+	</div>
+	<!-- 
+<div id="popup" aria-hidden="true" class="popup">
+	<div class="popup__wrapper">
+		<div class="popup__content">
+			<button data-close type="button" class="popup__close">Закрыть</button>
+			<div class="popup__text">
+			</div>
 		</div>
 	</div>
+</div>
+ -->
+
+	<script src="js/app.min.js?_v=20220121224455"></script>
 </body>
-<style>
-	@charset "UTF-8";
-	@import url("https://fonts.googleapis.com/css?family=Montserrat:regular,700&display=swap");
-
-	*,
-	*::before,
-	*::after {
-		padding: 0px;
-		margin: 0px;
-		border: 0px;
-		box-sizing: border-box;
-	}
-
-	html,
-	body {
-		height: 100%;
-		margin: 0;
-		padding: 0;
-		min-width: 320px;
-		width: 100%;
-		color: #fff;
-		background-color: #5e5373;
-	}
-
-	body {
-		font-family: Montserrat;
-		font-size: 100%;
-		line-height: 1;
-		font-size: 1rem;
-	}
-
-	a {
-		text-decoration: underline;
-		color: #ebe691
-	}
-
-	a:visited {
-		text-decoration: underline;
-		color: #aaa768;
-	}
-
-	a:hover {
-		text-decoration: none;
-	}
-
-	ul li {
-		list-style: none;
-	}
-
-	img {
-		vertical-align: top;
-	}
-
-	.wrapper {
-		width: 100%;
-		min-height: 100%;
-		overflow: hidden;
-	}
-
-	.rootpage {
-		padding: 30px;
-		display: flex;
-		flex-direction: column;
-		align-items: flex-start;
-	}
-
-	@media (max-width: 767px) {
-		.rootpage {
-			padding: 30px 15px;
-		}
-	}
-
-	h1 {
-		color: #ebe691;
-		font-size: 2.5rem;
-		margin: 0px 0px 1.25rem 0px;
-	}
-
-	@media (max-width: 767px) {
-		h1 {
-			font-size: 1.85rem;
-			margin: 0px 0px 1.25rem 0px;
-		}
-	}
-
-	h2 {
-		color: #ebe691;
-		font-size: 1.25rem;
-		margin: 0px 0px 1rem 0px;
-	}
-
-	@media (max-width: 767px) {
-		h2 {
-			font-size: 1.125rem;
-			margin: 0px 0px 1rem 0px;
-		}
-	}
-
-	.rootpage__info {
-		line-height: 140%;
-		margin: 0px 0px 1.5rem 0px;
-	}
-
-	.rootpage__list {
-		margin: 0px 0px 2.25rem 1.25rem;
-	}
-
-	.rootpage__list li:not(:last-child) {
-		margin: 0px 0px 15px 0px;
-	}
-
-	.rootpage__contacts,
-	.rootpage__tnx {
-		border-radius: 200px;
-		padding: 20px 65px;
-		line-height: 140%;
-	}
-
-	@media (max-width: 767px) {
-
-		.rootpage__contacts,
-		.rootpage__tnx {
-			border-radius: 40px;
-			padding: 20px;
-		}
-	}
-
-	.rootpage__contacts {
-		background: #32b5a4;
-
-	}
-
-	.rootpage__contacts a {
-		color: #ebe691;
-	}
-
-	.rootpage__tnx {
-		background: #c22d63;
-		margin: 0px 0px 1rem 0px;
-	}
-</style>
 
 </html>

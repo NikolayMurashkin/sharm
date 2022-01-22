@@ -367,7 +367,7 @@
   }
   v.fn = f.prototype;
   const w = "resize scroll".split(" ");
-  function b(e) {
+  function y(e) {
     return function (...t) {
       if (void 0 === t[0]) {
         for (let t = 0; t < this.length; t += 1)
@@ -378,29 +378,29 @@
       return this.on(e, ...t);
     };
   }
-  b("click"),
-    b("blur"),
-    b("focus"),
-    b("focusin"),
-    b("focusout"),
-    b("keyup"),
-    b("keydown"),
-    b("keypress"),
-    b("submit"),
-    b("change"),
-    b("mousedown"),
-    b("mousemove"),
-    b("mouseup"),
-    b("mouseenter"),
-    b("mouseleave"),
-    b("mouseout"),
-    b("mouseover"),
-    b("touchstart"),
-    b("touchend"),
-    b("touchmove"),
-    b("resize"),
-    b("scroll");
-  const y = {
+  y("click"),
+    y("blur"),
+    y("focus"),
+    y("focusin"),
+    y("focusout"),
+    y("keyup"),
+    y("keydown"),
+    y("keypress"),
+    y("submit"),
+    y("change"),
+    y("mousedown"),
+    y("mousemove"),
+    y("mouseup"),
+    y("mouseenter"),
+    y("mouseleave"),
+    y("mouseout"),
+    y("mouseover"),
+    y("touchstart"),
+    y("touchend"),
+    y("touchmove"),
+    y("resize"),
+    y("scroll");
+  const b = {
     addClass: function (...e) {
       const t = m(e.map((e) => e.split(" ")));
       return (
@@ -808,8 +808,8 @@
       return this;
     },
   };
-  Object.keys(y).forEach((e) => {
-    Object.defineProperty(v.fn, e, { value: y[e], writable: !0 });
+  Object.keys(b).forEach((e) => {
+    Object.defineProperty(v.fn, e, { value: b[e], writable: !0 });
   });
   const C = v;
   function S(e, t = 0) {
@@ -1176,15 +1176,15 @@
       "function" == typeof g && (g = i.slidesOffsetAfter.call(e));
       const v = e.snapGrid.length,
         w = e.slidesGrid.length;
-      let b = i.spaceBetween,
-        y = -m,
+      let y = i.spaceBetween,
+        b = -m,
         C = 0,
         S = 0;
       if (void 0 === r) return;
-      "string" == typeof b &&
-        b.indexOf("%") >= 0 &&
-        (b = (parseFloat(b.replace("%", "")) / 100) * r),
-        (e.virtualSize = -b),
+      "string" == typeof y &&
+        y.indexOf("%") >= 0 &&
+        (y = (parseFloat(y.replace("%", "")) / 100) * r),
+        (e.virtualSize = -y),
         a
           ? c.css({ marginLeft: "", marginBottom: "", marginTop: "" })
           : c.css({ marginRight: "", marginBottom: "", marginTop: "" }),
@@ -1235,26 +1235,26 @@
               l && (a[0].style.webkitTransform = l),
               i.roundLengths && (E = Math.floor(E));
           } else
-            (E = (r - (i.slidesPerView - 1) * b) / i.slidesPerView),
+            (E = (r - (i.slidesPerView - 1) * y) / i.slidesPerView),
               i.roundLengths && (E = Math.floor(E)),
               c[n] && (c[n].style[t("width")] = `${E}px`);
           c[n] && (c[n].swiperSlideSize = E),
             f.push(E),
             i.centeredSlides
-              ? ((y = y + E / 2 + C / 2 + b),
-                0 === C && 0 !== n && (y = y - r / 2 - b),
-                0 === n && (y = y - r / 2 - b),
-                Math.abs(y) < 0.001 && (y = 0),
-                i.roundLengths && (y = Math.floor(y)),
-                S % i.slidesPerGroup == 0 && u.push(y),
-                h.push(y))
-              : (i.roundLengths && (y = Math.floor(y)),
+              ? ((b = b + E / 2 + C / 2 + y),
+                0 === C && 0 !== n && (b = b - r / 2 - y),
+                0 === n && (b = b - r / 2 - y),
+                Math.abs(b) < 0.001 && (b = 0),
+                i.roundLengths && (b = Math.floor(b)),
+                S % i.slidesPerGroup == 0 && u.push(b),
+                h.push(b))
+              : (i.roundLengths && (b = Math.floor(b)),
                 (S - Math.min(e.params.slidesPerGroupSkip, S)) %
                   e.params.slidesPerGroup ==
-                  0 && u.push(y),
-                h.push(y),
-                (y = y + E + b)),
-            (e.virtualSize += E + b),
+                  0 && u.push(b),
+                h.push(b),
+                (b = b + E + y)),
+            (e.virtualSize += E + y),
             (C = E),
             (S += 1);
         }
@@ -1283,7 +1283,7 @@
       if ((0 === u.length && (u = [0]), 0 !== i.spaceBetween)) {
         const s = e.isHorizontal() && a ? "marginLeft" : t("marginRight");
         c.filter((e, t) => !i.cssMode || t !== c.length - 1).css({
-          [s]: `${b}px`,
+          [s]: `${y}px`,
         });
       }
       if (i.centeredSlides && i.centeredSlidesBounds) {
@@ -4217,6 +4217,21 @@
       });
     }
   }, 0),
+    (function () {
+      const e = document.querySelector(".video"),
+        t = document.querySelector(".video__play"),
+        s = document.querySelector(".video__video"),
+        i = document.querySelector(".video__over");
+      t.addEventListener("click", function () {
+        s.paused
+          ? (s.play(), e.classList.add("video-is-playing"))
+          : (s.pause(), e.classList.remove("video-is-playing"), s.load());
+      }),
+        i.addEventListener("click", function () {
+          s.played &&
+            (s.pause(), e.classList.remove("video-is-playing"), s.load());
+        });
+    })(),
     (window.FLS = !0),
     (function (e) {
       let t = new Image();

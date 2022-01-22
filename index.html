@@ -6,7 +6,7 @@
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20220121224455">
+	<link rel="stylesheet" href="css/style.min.css?_v=20220122134816">
 	<link rel="shortcut icon" href="favicon.ico">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -65,8 +65,10 @@
 							<button data-showmore-button type="button" class="showmore__more"><span>Читать далее</span><span>Скрыть</span></button>
 						</div>
 					</div>
-					<div class="welcome__video">
-						<iframe src="https://www.youtube.com/embed/CNiy8inJbhs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+					<div class="welcome__video video">
+						<div class="video__play"></div>
+						<div class="video__over"></div>
+						<video class="video__video" poster="files/welcome-poster.jpg" loop preload="auto" muted src="files/welcome-video.mp4"></video>
 					</div>
 				</div>
 			</section>
@@ -337,7 +339,7 @@
 </div>
  -->
 
-	<script src="js/app.min.js?_v=20220121224455"></script>
+	<script src="js/app.min.js?_v=20220122134816"></script>
 </body>
 
 </html>

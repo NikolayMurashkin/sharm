@@ -873,7 +873,7 @@
       "Object" === Object.prototype.toString.call(e).slice(8, -1)
     );
   }
-  function k(...e) {
+  function L(...e) {
     const t = Object(e[0]),
       s = ["__proto__", "constructor", "prototype"];
     for (let n = 1; n < e.length; n += 1) {
@@ -894,9 +894,9 @@
             (x(t[i]) && x(r[i])
               ? r[i].__swiper__
                 ? (t[i] = r[i])
-                : k(t[i], r[i])
+                : L(t[i], r[i])
               : !x(t[i]) && x(r[i])
-              ? ((t[i] = {}), r[i].__swiper__ ? (t[i] = r[i]) : k(t[i], r[i]))
+              ? ((t[i] = {}), r[i].__swiper__ ? (t[i] = r[i]) : L(t[i], r[i]))
               : (t[i] = r[i]));
         }
       }
@@ -904,7 +904,7 @@
     var i;
     return t;
   }
-  function L(e, t, s) {
+  function k(e, t, s) {
     e.style.setProperty(t, s);
   }
   function $({ swiper: e, targetPosition: t, side: s }) {
@@ -1190,8 +1190,8 @@
           : c.css({ marginRight: "", marginBottom: "", marginTop: "" }),
         i.centeredSlides &&
           i.cssMode &&
-          (L(e.wrapperEl, "--swiper-centered-offset-before", ""),
-          L(e.wrapperEl, "--swiper-centered-offset-after", ""));
+          (k(e.wrapperEl, "--swiper-centered-offset-before", ""),
+          k(e.wrapperEl, "--swiper-centered-offset-after", ""));
       const T = i.grid && i.grid.rows > 1 && e.grid;
       let E;
       T && e.grid.initSlides(p);
@@ -1322,8 +1322,8 @@
         }),
         i.centeredSlides && i.cssMode && !i.centeredSlidesBounds)
       ) {
-        L(e.wrapperEl, "--swiper-centered-offset-before", -u[0] + "px"),
-          L(
+        k(e.wrapperEl, "--swiper-centered-offset-before", -u[0] + "px"),
+          k(
             e.wrapperEl,
             "--swiper-centered-offset-after",
             e.size / 2 - f[f.length - 1] / 2 + "px"
@@ -2532,7 +2532,7 @@
           e.emitContainerClasses());
       const u = l.direction && l.direction !== n.direction,
         h = n.loop && (l.slidesPerView !== n.slidesPerView || u);
-      u && s && e.changeDirection(), k(e.params, l);
+      u && s && e.changeDirection(), L(e.params, l);
       const f = e.params.enabled;
       Object.assign(e, {
         allowTouchMove: e.params.allowTouchMove,
@@ -2720,9 +2720,9 @@
                 "enabled" in e[i] ||
                 (e[i].enabled = !0),
               e[i] || (e[i] = { enabled: !1 }),
-              k(t, s))
-            : k(t, s))
-        : k(t, s);
+              L(t, s))
+            : L(t, s))
+        : L(t, s);
     };
   }
   const se = {
@@ -2854,14 +2854,14 @@
           ? (s = e[0])
           : ([t, s] = e),
         s || (s = {}),
-        (s = k({}, s)),
+        (s = L({}, s)),
         t && !s.el && (s.el = t),
         s.el && C(s.el).length > 1)
       ) {
         const e = [];
         return (
           C(s.el).each((t) => {
-            const i = k({}, s, { el: t });
+            const i = L({}, s, { el: t });
             e.push(new ne(i));
           }),
           e
@@ -2887,11 +2887,11 @@
           emit: i.emit.bind(i),
         });
       });
-      const r = k({}, ee, n);
+      const r = L({}, ee, n);
       return (
-        (i.params = k({}, r, ie, s)),
-        (i.originalParams = k({}, i.params)),
-        (i.passedParams = k({}, s)),
+        (i.params = L({}, r, ie, s)),
+        (i.originalParams = L({}, i.params)),
+        (i.passedParams = L({}, s)),
         i.params &&
           i.params.on &&
           Object.keys(i.params.on).forEach((e) => {
@@ -3224,7 +3224,7 @@
       );
     }
     static extendDefaults(e) {
-      k(ie, e);
+      L(ie, e);
     }
     static get extendedDefaults() {
       return ie;
@@ -4055,7 +4055,7 @@
           observeParents: !0,
           slidesPerView: 1,
           spaceBetween: 30,
-          autoHeight: !1,
+          autoHeight: !0,
           speed: 800,
           loop: !0,
           pagination: {
@@ -4231,7 +4231,22 @@
           s.played &&
             (s.pause(), e.classList.remove("video-is-playing"), s.load());
         });
-    })(),
+    })();
+  document.querySelector("header.header");
+  let ve,
+    we = document.body;
+  (ve = window.scrollY),
+    window.addEventListener("scroll", function (e) {
+      let t = window.scrollY;
+      t > ve
+        ? (we.classList.remove("_scroll-up"), we.classList.add("_scroll-down"))
+        : t < ve &&
+          (we.classList.remove("_scroll-down"), we.classList.add("_scroll-up")),
+        (ve = t);
+    }),
+    0 == ve &&
+      we.classList.contains("_scroll-up") &&
+      we.classList.remove("_scroll-up"),
     (window.FLS = !0),
     (function (e) {
       let t = new Image();

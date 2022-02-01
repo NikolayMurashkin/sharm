@@ -873,7 +873,7 @@
       "Object" === Object.prototype.toString.call(e).slice(8, -1)
     );
   }
-  function L(...e) {
+  function k(...e) {
     const t = Object(e[0]),
       s = ["__proto__", "constructor", "prototype"];
     for (let n = 1; n < e.length; n += 1) {
@@ -894,9 +894,9 @@
             (x(t[i]) && x(r[i])
               ? r[i].__swiper__
                 ? (t[i] = r[i])
-                : L(t[i], r[i])
+                : k(t[i], r[i])
               : !x(t[i]) && x(r[i])
-              ? ((t[i] = {}), r[i].__swiper__ ? (t[i] = r[i]) : L(t[i], r[i]))
+              ? ((t[i] = {}), r[i].__swiper__ ? (t[i] = r[i]) : k(t[i], r[i]))
               : (t[i] = r[i]));
         }
       }
@@ -904,10 +904,10 @@
     var i;
     return t;
   }
-  function k(e, t, s) {
+  function L(e, t, s) {
     e.style.setProperty(t, s);
   }
-  function $({ swiper: e, targetPosition: t, side: s }) {
+  function P({ swiper: e, targetPosition: t, side: s }) {
     const i = h(),
       n = -e.translate;
     let r,
@@ -936,11 +936,11 @@
       };
     c();
   }
-  let P, M, O;
+  let $, M, O;
   function A() {
     return (
-      P ||
-        (P = (function () {
+      $ ||
+        ($ = (function () {
           const e = h(),
             t = p();
           return {
@@ -965,10 +965,10 @@
             gestures: "ongesturestart" in e,
           };
         })()),
-      P
+      $
     );
   }
-  function I(e = {}) {
+  function _(e = {}) {
     return (
       M ||
         (M = (function ({ userAgent: e } = {}) {
@@ -1014,7 +1014,7 @@
       M
     );
   }
-  function _() {
+  function I() {
     return (
       O ||
         (O = (function () {
@@ -1036,7 +1036,7 @@
       O
     );
   }
-  const z = {
+  const B = {
     on(e, t, s) {
       const i = this;
       if ("function" != typeof t) return i;
@@ -1111,7 +1111,7 @@
       );
     },
   };
-  const B = {
+  const z = {
     updateSize: function () {
       const e = this;
       let t, s;
@@ -1190,8 +1190,8 @@
           : c.css({ marginRight: "", marginBottom: "", marginTop: "" }),
         i.centeredSlides &&
           i.cssMode &&
-          (k(e.wrapperEl, "--swiper-centered-offset-before", ""),
-          k(e.wrapperEl, "--swiper-centered-offset-after", ""));
+          (L(e.wrapperEl, "--swiper-centered-offset-before", ""),
+          L(e.wrapperEl, "--swiper-centered-offset-after", ""));
       const T = i.grid && i.grid.rows > 1 && e.grid;
       let E;
       T && e.grid.initSlides(p);
@@ -1322,8 +1322,8 @@
         }),
         i.centeredSlides && i.cssMode && !i.centeredSlidesBounds)
       ) {
-        k(e.wrapperEl, "--swiper-centered-offset-before", -u[0] + "px"),
-          k(
+        L(e.wrapperEl, "--swiper-centered-offset-before", -u[0] + "px"),
+          L(
             e.wrapperEl,
             "--swiper-centered-offset-after",
             e.size / 2 - f[f.length - 1] / 2 + "px"
@@ -1647,7 +1647,7 @@
         else {
           if (!r.support.smoothScroll)
             return (
-              $({ swiper: r, targetPosition: -c, side: e ? "left" : "top" }), !0
+              P({ swiper: r, targetPosition: -c, side: e ? "left" : "top" }), !0
             );
           o.scrollTo({ [e ? "left" : "top"]: -c, behavior: "smooth" });
         }
@@ -1798,7 +1798,7 @@
         } else {
           if (!r.support.smoothScroll)
             return (
-              $({ swiper: r, targetPosition: s, side: e ? "left" : "top" }), !0
+              P({ swiper: r, targetPosition: s, side: e ? "left" : "top" }), !0
             );
           h.scrollTo({ [e ? "left" : "top"]: s, behavior: "smooth" });
         }
@@ -2051,7 +2051,7 @@
         s.removeAttr("data-swiper-slide-index");
     },
   };
-  function W(e) {
+  function q(e) {
     const t = this,
       s = p(),
       i = h(),
@@ -2139,7 +2139,7 @@
     }
     t.emit("touchStart", l);
   }
-  function q(e) {
+  function W(e) {
     const t = p(),
       s = this,
       i = s.touchEventsData,
@@ -2298,7 +2298,7 @@
       s.updateProgress(i.currentTranslate),
       s.setTranslate(i.currentTranslate));
   }
-  function j(e) {
+  function V(e) {
     const t = this,
       s = t.touchEventsData,
       { params: i, touches: n, rtlTranslate: r, slidesGrid: a, enabled: o } = t;
@@ -2388,7 +2388,7 @@
           "prev" === t.swipeDirection && t.slideTo(u));
     }
   }
-  function F() {
+  function j() {
     const e = this,
       { params: t, el: s } = e;
     if (s && 0 === s.offsetWidth) return;
@@ -2410,7 +2410,7 @@
       (e.allowSlideNext = i),
       e.params.watchOverflow && r !== e.snapGrid && e.checkOverflow();
   }
-  function V(e) {
+  function F(e) {
     const t = this;
     t.enabled &&
       (t.allowClick ||
@@ -2477,21 +2477,21 @@
             o.ios || o.android
               ? "resize orientationchange observerUpdate"
               : "resize observerUpdate",
-            F,
+            j,
             !0
           )
-        : e[u]("observerUpdate", F, !0);
+        : e[u]("observerUpdate", j, !0);
   };
   const Q = {
       attachEvents: function () {
         const e = this,
           t = p(),
           { params: s, support: i } = e;
-        (e.onTouchStart = W.bind(e)),
-          (e.onTouchMove = q.bind(e)),
-          (e.onTouchEnd = j.bind(e)),
+        (e.onTouchStart = q.bind(e)),
+          (e.onTouchMove = W.bind(e)),
+          (e.onTouchEnd = V.bind(e)),
           s.cssMode && (e.onScroll = R.bind(e)),
-          (e.onClick = V.bind(e)),
+          (e.onClick = F.bind(e)),
           i.touch && !Y && (t.addEventListener("touchstart", X), (Y = !0)),
           U(e, "on");
       },
@@ -2532,7 +2532,7 @@
           e.emitContainerClasses());
       const u = l.direction && l.direction !== n.direction,
         h = n.loop && (l.slidesPerView !== n.slidesPerView || u);
-      u && s && e.changeDirection(), L(e.params, l);
+      u && s && e.changeDirection(), k(e.params, l);
       const f = e.params.enabled;
       Object.assign(e, {
         allowTouchMove: e.params.allowTouchMove,
@@ -2720,14 +2720,14 @@
                 "enabled" in e[i] ||
                 (e[i].enabled = !0),
               e[i] || (e[i] = { enabled: !1 }),
-              L(t, s))
-            : L(t, s))
-        : L(t, s);
+              k(t, s))
+            : k(t, s))
+        : k(t, s);
     };
   }
   const se = {
-      eventsEmitter: z,
-      update: B,
+      eventsEmitter: B,
+      update: z,
       translate: D,
       transition: {
         setTransition: function (e, t) {
@@ -2854,14 +2854,14 @@
           ? (s = e[0])
           : ([t, s] = e),
         s || (s = {}),
-        (s = L({}, s)),
+        (s = k({}, s)),
         t && !s.el && (s.el = t),
         s.el && C(s.el).length > 1)
       ) {
         const e = [];
         return (
           C(s.el).each((t) => {
-            const i = L({}, s, { el: t });
+            const i = k({}, s, { el: t });
             e.push(new ne(i));
           }),
           e
@@ -2870,8 +2870,8 @@
       const i = this;
       (i.__swiper__ = !0),
         (i.support = A()),
-        (i.device = I({ userAgent: s.userAgent })),
-        (i.browser = _()),
+        (i.device = _({ userAgent: s.userAgent })),
+        (i.browser = I()),
         (i.eventsListeners = {}),
         (i.eventsAnyListeners = []),
         (i.modules = [...i.__modules__]),
@@ -2887,11 +2887,11 @@
           emit: i.emit.bind(i),
         });
       });
-      const r = L({}, ee, n);
+      const r = k({}, ee, n);
       return (
-        (i.params = L({}, r, ie, s)),
-        (i.originalParams = L({}, i.params)),
-        (i.passedParams = L({}, s)),
+        (i.params = k({}, r, ie, s)),
+        (i.originalParams = k({}, i.params)),
+        (i.passedParams = k({}, s)),
         i.params &&
           i.params.on &&
           Object.keys(i.params.on).forEach((e) => {
@@ -3224,7 +3224,7 @@
       );
     }
     static extendDefaults(e) {
-      L(ie, e);
+      k(ie, e);
     }
     static get extendedDefaults() {
       return ie;
@@ -4051,6 +4051,7 @@
           modules: [oe, ce, de, ue],
           effect: "fade",
           fadeEffect: { crossFade: !0 },
+          autoplay: { delay: 5e3, disableOnInteraction: !1 },
           observer: !0,
           observeParents: !0,
           slidesPerView: 1,
@@ -4068,6 +4069,65 @@
             prevEl: ".swiper-button-prev-reviews ",
           },
           breakpoints: {},
+          on: {},
+        }),
+      document.querySelector(".courses__slider") &&
+        new re(".courses__slider", {
+          modules: [oe, ce, de],
+          autoplay: { delay: 3e3, disableOnInteraction: !0 },
+          observer: !0,
+          observeParents: !0,
+          slidesPerView: 3,
+          spaceBetween: 40,
+          autoHeight: !1,
+          speed: 800,
+          loop: !0,
+          pagination: {
+            el: ".slider-quality-pagging",
+            clickable: !0,
+            type: "fraction",
+          },
+          navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+          },
+          breakpoints: {
+            320: { slidesPerView: 1.2, spaceBetween: 10, autoHeight: !0 },
+            480: { slidesPerView: 1.5, spaceBetween: 15 },
+            550: { slidesPerView: 2, spaceBetween: 15 },
+            768: { slidesPerView: 2.5, spaceBetween: 20 },
+            992: { slidesPerView: 3, spaceBetween: 30 },
+            1268: { slidesPerView: 3, spaceBetween: 40 },
+          },
+          on: {},
+        }),
+      document.querySelector(".gallery__slider") &&
+        new re(".gallery__slider", {
+          modules: [oe, ce, de],
+          autoplay: { delay: 5e3, disableOnInteraction: !1 },
+          observer: !0,
+          observeParents: !0,
+          slidesPerView: 2,
+          spaceBetween: 30,
+          autoHeight: !1,
+          speed: 800,
+          loop: !0,
+          pagination: {
+            el: ".slider-quality-pagging-gallery",
+            clickable: !0,
+            type: "fraction",
+          },
+          navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+          },
+          breakpoints: {
+            320: { slidesPerView: 1.3, spaceBetween: 10, autoHeight: !0 },
+            480: { slidesPerView: 2, spaceBetween: 10 },
+            768: { slidesPerView: 2, spaceBetween: 20 },
+            992: { slidesPerView: 2, spaceBetween: 20 },
+            1268: { slidesPerView: 2, spaceBetween: 30 },
+          },
           on: {},
         });
   });
@@ -4222,15 +4282,16 @@
         t = document.querySelector(".video__play"),
         s = document.querySelector(".video__video"),
         i = document.querySelector(".video__over");
-      t.addEventListener("click", function () {
-        s.paused
-          ? (s.play(), e.classList.add("video-is-playing"))
-          : (s.pause(), e.classList.remove("video-is-playing"), s.load());
-      }),
+      s &&
+        (t.addEventListener("click", function () {
+          s.paused
+            ? (s.play(), e.classList.add("video-is-playing"))
+            : (s.pause(), e.classList.remove("video-is-playing"), s.load());
+        }),
         i.addEventListener("click", function () {
           s.played &&
             (s.pause(), e.classList.remove("video-is-playing"), s.load());
-        });
+        }));
     })();
   document.querySelector("header.header");
   let ve,

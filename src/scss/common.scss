@@ -1,0 +1,26 @@
+// Заголовки, общие БЄМ блоки и проче...
+.button {
+	font-size: rem(18);
+	line-height: math.div(22, 18);
+	display: inline-flex;
+	flex-direction: column;
+	border: 2px solid $mainColor;
+	border-radius: 10px;
+	padding: 15px 56px;
+	transition: all 0.3s ease 0s;
+	@media (any-hover: hover) {
+		&:hover {
+			color: #be52a6;
+			border: 2px solid #be52a6;
+		}
+	}
+}
+.block-title {
+	font-family: Merriweather;
+	@include adaptiveValue("font-size", 48, 30);
+	line-height: math.div(60, 48);
+}
+.block-subtitle {
+	@include adaptiveValue("font-size", 18, 14);
+	line-height: math.div(26, 18);
+}

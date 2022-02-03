@@ -1,0 +1,21 @@
+[data-showmore] {
+}
+[data-showmore-content] {
+}
+[data-showmore-button] {
+	display: inline-flex;
+	font-size: rem(16);
+	line-height: math.div(30, 16);
+	color: $mainColorHover;
+	span {
+		&:last-child {
+			display: none;
+		}
+		._showmore-active & {
+			display: none;
+			&:last-child {
+				display: block;
+			}
+		}
+	}
+}
